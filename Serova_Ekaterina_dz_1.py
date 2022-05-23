@@ -49,7 +49,7 @@ if one_day <= user_time:
 # сумма цифр которых делится нацело на 7.
 #* Решить задачу под пунктом b, не создавая новый список.
 
-import random
+
 
 list_cubes = [x**3 for x in range(1000) if  x%2 != 0 ]
 my_sum_list =[]
