@@ -56,7 +56,7 @@ my_sum_list =[]
 
 for n in range(len(list_cubes)):
     number_in_str = str(list_cubes[n])
-    list_sum=list(number_in_str) #разбиение числа на отдельные
+    list_sum=list(number_in_str)
     #print(list_sum_number_in_str)
     for i in range(len(list_sum)):
         list_sum[i]=int(list_sum[i])
@@ -72,17 +72,36 @@ my_sum_list =[]
 
 for n in range(len(list_cubes)):
     number_in_str = str(list_cubes[n])
-    list_sum=list(number_in_str) #разбиение числа на отдельные
+    list_sum=list(number_in_str)
     #print(list_sum_number_in_str)
     for i in range(len(list_sum)):
         list_sum[i]=int(list_sum[i])
     #print (list_sum)
-    sum_numbers = sum(list_sum) # сумма чисел
+    sum_numbers = sum(list_sum)
     #print(sum_numbers)
     if sum_numbers%7==0:
         my_sum_list.append(list_cubes[n])
 print (sum(my_sum_list))
 
+#Склонение слова
+#Реализовать склонение слова «процент» во фразе «N процентов».
+#Вывести эту фразу на экран отдельной строкой для каждого из чисел в интервале от 1 до 100:
+#1 процент
+#2 процента
+#3 процента
+#4 процента
+#5 процентов
+#6 процентов..
+
+
+for i in range(1,101):
+    str_percent=str(i)
+    if str_percent[-1]=='1':
+        print('{} процент'.format(str_percent))
+    elif str_percent[-1]=='2' or str_percent[-1]=='3' or str_percent[-1]=='4':
+        print('{} процента'.format(str_percent))
+    else:
+        print('{} процентов'.format(str_percent))
 
 
 
