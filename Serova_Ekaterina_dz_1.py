@@ -40,3 +40,53 @@ if one_day <= user_time:
     minute = user_time // one_minute
     second = user_time % one_minute
     print('{} дн {} час {} мин {} сек'.format(day, hour, minute, second))
+
+#2. Создать список, состоящий из кубов нечётных чисел от 1 до 1000 (куб X - третья степень числа X):
+#Вычислить сумму тех чисел из этого списка, сумма цифр которых делится нацело на 7.
+# Например, число «19 ^ 3 = 6859» будем включать в сумму, так как 6 + 8 + 5 + 9 = 28 –
+# делится нацело на 7. Внимание: использовать только арифметические операции!
+#К каждому элементу списка добавить 17 и заново вычислить сумму тех чисел из этого списка,
+# сумма цифр которых делится нацело на 7.
+#* Решить задачу под пунктом b, не создавая новый список.
+
+import random
+
+list_cubes = [x**3 for x in range(1000) if  x%2 != 0 ]
+my_sum_list =[]
+
+for n in range(len(list_cubes)):
+    number_in_str = str(list_cubes[n])
+    list_sum=list(number_in_str) #разбиение числа на отдельные
+    #print(list_sum_number_in_str)
+    for i in range(len(list_sum)):
+        list_sum[i]=int(list_sum[i])
+    #print (list_sum)
+    sum_numbers = sum(list_sum) # сумма чисел
+    #print(sum_numbers)
+    if sum_numbers%7==0:
+        my_sum_list.append(list_cubes[n])
+print (sum(my_sum_list))
+
+list_cubes = [x**3+17 for x in range(1000) if  x%2 != 0 ]
+my_sum_list =[]
+
+for n in range(len(list_cubes)):
+    number_in_str = str(list_cubes[n])
+    list_sum=list(number_in_str) #разбиение числа на отдельные
+    #print(list_sum_number_in_str)
+    for i in range(len(list_sum)):
+        list_sum[i]=int(list_sum[i])
+    #print (list_sum)
+    sum_numbers = sum(list_sum) # сумма чисел
+    #print(sum_numbers)
+    if sum_numbers%7==0:
+        my_sum_list.append(list_cubes[n])
+print (sum(my_sum_list))
+
+
+
+
+
+
+
+
