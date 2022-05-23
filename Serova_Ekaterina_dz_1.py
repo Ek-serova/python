@@ -61,7 +61,7 @@ for n in range(len(list_cubes)):
     for i in range(len(list_sum)):
         list_sum[i]=int(list_sum[i])
     #print (list_sum)
-    sum_numbers = sum(list_sum) 
+    sum_numbers = sum(list_sum)
     #print(sum_numbers)
     if sum_numbers%7==0:
         my_sum_list.append(list_cubes[n])
