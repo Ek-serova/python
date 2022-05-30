@@ -39,7 +39,7 @@ def thesaurus_adv(*args):
 
     print(result)
 
-def thesaurus(name_em,surname_em,result_thesaurus):
+def thesaurus(name_em,surname_em,result_thesaurus={}):
     if result_thesaurus.get(name_em[0]) == None:
         result_thesaurus.setdefault(name_em[0], [])
         result_thesaurus[name_em[0]].append(f'{name_em} {surname_em}')
@@ -47,7 +47,38 @@ def thesaurus(name_em,surname_em,result_thesaurus):
         result_thesaurus[name_em[0]].append(f'{name_em} {surname_em}')
     return result_thesaurus
 
-thesaurus_adv("Иван Иванов", "Инна Серова", "Полина Алексеева", "Петр Алексеев", "Андрей Александров")
+thesaurus_adv("Иван Иванов", "Инна Серова", "Егор Андреев", "Полина Алексеева", "Петр Алексеев", "Андрей Александров")
+
+#задание 5
+
+from random import choice
+
+nouns = ["автомобиль", "лес", "огонь", "город", "дом"]
+adverbs = ["сегодня", "вчера", "завтра", "позавчера", "ночью"]
+adjectives = ["веселый", "яркий", "зеленый", "утопичный", "мягкий"]
 
 
+def get_joket(n,flag=True):
+    """функция выдает слчайную шутку"""
+    for i in range(n):
+        joke =f'{choice(nouns)} {choice(adverbs)} {choice(adjectives)}'
+        print (joke)
+        list = []
+        if flag == True:
+            list_2 = joke.split()
+            for noun in nouns:
+                for fun in list_2:
+                    if noun == fun:
+                        nouns.remove(noun)
 
+            for adverb in adverbs:
+                for fun in list_2:
+                    if adverb == fun:
+                        adverbs.remove(adverb)
+
+            for adjective in adjectives:
+                for fun in list_2:
+                    if adjective == fun:
+                        adjectives.remove(adjective)
+
+get_joket(2,flag=True)
