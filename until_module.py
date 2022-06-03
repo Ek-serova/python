@@ -1,6 +1,3 @@
-
-
-#задание 2
 import requests
 
 def currency_rates(name_valut):
@@ -11,16 +8,3 @@ def currency_rates(name_valut):
     return (course)
 
 print(currency_rates('USD'))
-
-#задание 4
-
-import until_module
-
-until_module.currency_rates
-
-
-
-
-
-
-
