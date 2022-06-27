@@ -1,3 +1,5 @@
+#task 1
+
 import re
 
 def email_parse(email_address):
@@ -7,3 +9,4 @@ def email_parse(email_address):
     return dict(zip(["username", "domain"], parsed[0]))
 
 print(email_parse('ivanov@geekbrains.ru'))
+
